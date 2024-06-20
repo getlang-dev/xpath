@@ -3328,7 +3328,7 @@ var xpath = (typeof exports === 'undefined') ? {} : exports;
             return this.stringForContainerNode(n);
         }
         if (n.nodeType === NodeTypes.ATTRIBUTE_NODE) {
-            return n.value || n.nodeValue;
+            return n.value ?? n.nodeValue;
         }
         if (n.isNamespaceNode) {
             return n.namespace;
